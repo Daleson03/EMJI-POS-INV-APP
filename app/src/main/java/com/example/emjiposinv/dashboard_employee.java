@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -23,14 +24,29 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class dashboard_employee extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+
+    private SupabaseAuthApi supabaseAuthApi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_employee);
+
+        supabaseAuthApi = RetrofitClient.getClient().create(SupabaseAuthApi.class);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         // Only set toolbar if no action bar is already provided by the window decor
@@ -172,8 +188,55 @@ public class dashboard_employee extends AppCompatActivity implements NavigationV
         Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(dashboard_employee.this, MainActivity.class);
         startActivity(intent);
+        logUserAction();
         finish();
     }
+
+    public void logUserAction() {
+        String email = AuthManager.emails;
+        String role = AuthManager.Role;// Assuming this value is set earlier
+        String supplier = AuthManager.Supplier;
+
+        String currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+        String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+        String action = "Log Out";
+
+        Map<String, Object> logData = new HashMap<>();
+        logData.put("email", email);
+
+        String user;
+        if (role.equals("Diser")) {
+            user = supplier + " " + role;
+            logData.put("user", user);
+        } else {
+            logData.put("user", role);
+        }
+        logData.put("date", currentDate);
+        logData.put("time", currentTime);
+        logData.put("action", action);  // "Log In" or "Log Out"
+
+        supabaseAuthApi.insertAccountLog(logData).enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful()) {
+                    Log.d("LogAction", "User action logged successfully.");
+                } else {
+                    try {
+                        String errorBody = response.errorBody().string();
+                        Log.e("LogAction", "Insert failed: " + errorBody);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Log.e("LogAction", "Error logging action: " + t.getMessage());
+            }
+        });
+    }
+
 
     private void showExitConfirmationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
