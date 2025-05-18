@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"> <!-- Ensures that the ScrollView takes up the full screen -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1024dp"
+            android:background="@drawable/bgmanageaccount"
+            tools:context=".SettingFragment">
+
+
+            <Button
+                android:id="@+id/btnchangepass"
+                android:layout_width="213dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btncreate"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="92dp"
+                android:background="@drawable/square_button_blue"
+                android:backgroundTint="@color/blue"
+                android:drawableLeft="@drawable/iconchangepass"
+                android:drawablePadding="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Change Password"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/tableContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnchangepin"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="550dp"
+                    android:fillViewport="true"
+                    android:importantForAccessibility="no"
+                    android:nestedScrollingEnabled="true"> <!-- Adjust height as needed -->
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:scrollbars="horizontal">
+
+                        <TableLayout
+                            android:id="@+id/tableLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/table_background"
+                            android:padding="5dp"
+                            android:showDividers="middle"
+                            android:stretchColumns="*" />
+                    </HorizontalScrollView>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btncreate"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="237dp"
+                android:layout_marginEnd="92dp"
+                android:background="@drawable/square_button_greenlight"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:drawableLeft="@drawable/iconaddaccount"
+                android:drawablePadding="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Create Account"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnchangepin"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnchangepass"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="91dp"
+                android:background="@drawable/square_button_oranglight"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:drawableLeft="@drawable/iconppin"
+                android:drawablePadding="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Change PIN"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

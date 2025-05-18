@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:background="@drawable/bgloginform"
+    android:gravity="center_vertical">
+
+    <EditText
+        android:id="@+id/editCurrentPin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:hint="Current 4-Digit PIN"
+        android:inputType="numberPassword"
+        android:maxLength="4" />
+
+    <EditText
+        android:id="@+id/editNewPin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="New 4-Digit PIN"
+        android:inputType="numberPassword"
+        android:layout_marginTop="16dp"
+        android:maxLength="4" />
+
+    <EditText
+        android:id="@+id/editConfirmPin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Confirm New 4-Digit PIN"
+        android:inputType="numberPassword"
+        android:layout_marginTop="8dp"
+        android:maxLength="4" />
+
+    <Button
+        android:id="@+id/btnSavePin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save PIN"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/square_button_blue"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnResetPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Reset PIN to Default"
+        android:background="@drawable/square_button_greenlight"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:textColor="@color/white" />
+</LinearLayout>

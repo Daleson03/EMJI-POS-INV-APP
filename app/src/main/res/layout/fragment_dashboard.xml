@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"> <!-- Ensures that the ScrollView takes up the full screen -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="919dp"
+            android:background="@drawable/bgdashboardf"
+            tools:context=".DashboardFragment">
+
+            <Button
+                android:id="@+id/btncustran"
+                android:layout_width="324dp"
+                android:layout_height="106dp"
+                android:layout_below="@+id/btnsales"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginEnd="46dp"
+                android:background="@drawable/square_button"
+                android:backgroundTint="@color/white"
+                android:text="CUSTOMER TRANSACTION TODAY: 500"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnavailproducts"
+                android:layout_width="324dp"
+                android:layout_height="106dp"
+                android:layout_below="@+id/btncustran"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="46dp"
+                android:background="@drawable/square_button"
+                android:backgroundTint="@color/white"
+                android:text="AVAILABLE PRODUCT: 100"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnsup"
+                android:layout_width="324dp"
+                android:layout_height="106dp"
+                android:layout_below="@+id/btnavailproducts"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="46dp"
+                android:background="@drawable/square_button"
+                android:backgroundTint="@color/white"
+                android:text="SUPPLIER: 100"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnsales"
+                android:layout_width="324dp"
+                android:layout_height="106dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="273dp"
+                android:layout_marginEnd="46dp"
+                android:background="@drawable/square_button"
+                android:backgroundTint="@color/white"
+                android:text="SALE THIS MONTH: 0"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.widget.ScrollView>

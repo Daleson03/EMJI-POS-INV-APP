@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"> <!-- Ensures that the ScrollView takes up the full screen -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Add your content here
+        <TextView
+            android:id="@+id/txtContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />-->
+
+        <!-- More views here -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="919dp"
+            android:background="@drawable/bgaddupdateproduct"
+            tools:context=".NewPurchaseFragment">
+
+            <Button
+                android:id="@+id/btnsearch2"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnscan"
+                android:layout_alignStart="@+id/btnscan"
+                android:layout_alignEnd="@+id/btnscan"
+                android:layout_marginStart="-22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="-4dp"
+                android:backgroundTint="@android:color/holo_orange_dark"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:drawableLeft="@drawable/iconsearch"
+                android:drawablePadding="8dp"
+                android:text="search"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:background="@drawable/square_button_darkorange"/>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="120dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/btnsearch2"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:text="Batch Number"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/ddbatchnumber"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textView11"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/spinner_border"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/txtproductid"
+                android:layout_width="220dp"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="219dp"
+                android:backgroundTint="@color/gray"
+                android:ems="10"
+                android:enabled="true"
+                android:hint="Product ID"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <Button
+                android:id="@+id/btnscan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtproductid"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/blue"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:drawableLeft="@drawable/iconscan"
+                android:drawablePadding="8dp"
+                android:text="scan"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:background="@drawable/square_button_blue"/>
+
+            <EditText
+                android:id="@+id/txtproductname"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_below="@+id/ddbatchnumber"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/gray"
+                android:ems="10"
+                android:hint="Product Name"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <TextView
+                android:id="@+id/txtsupplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtproductname"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:text="Supplier"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtunitprice"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:text="Status"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/ddsupplierinstock"
+                android:layout_width="180dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/txtsupplier"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/spinner_border"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <Spinner
+                android:id="@+id/ddstatusinstock"
+                android:layout_width="180dp"
+                android:layout_height="59dp"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/spinner_border"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnConnectPrinter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ddstatusinstock"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="35dp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:drawableLeft="@drawable/iconadd"
+                android:drawablePadding="8dp"
+                android:text="Add"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:background="@drawable/square_button_greenlight"/>
+
+            <Button
+                android:id="@+id/btnupload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ddstatusinstock"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:drawableLeft="@drawable/iconupdate"
+                android:drawablePadding="8dp"
+                android:text="Update"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:background="@drawable/square_button_oranglight"/>
+
+            <EditText
+                android:id="@+id/txtpurchaseprice"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_below="@+id/ddsupplierinstock"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/gray"
+                android:ems="10"
+                android:hint="Purchase Price"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <EditText
+                android:id="@+id/txtunitprice"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_below="@+id/txtpurchaseprice"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/gray"
+                android:ems="10"
+                android:hint="Unit Price"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.widget.ScrollView>

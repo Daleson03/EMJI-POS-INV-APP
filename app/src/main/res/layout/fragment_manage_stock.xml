@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"> <!-- Ensures that the ScrollView takes up the full screen -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Add your content here
+        <TextView
+            android:id="@+id/txtContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />-->
+
+        <!-- More views here -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1024dp"
+            android:background="@drawable/bgmanagestock"
+            tools:context=".ManageStockFragment">
+
+            <Button
+                android:id="@+id/btnsearch3"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnscan3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/square_button_darkorange"
+                android:backgroundTint="@android:color/holo_orange_dark"
+                android:drawableLeft="@drawable/iconsearch"
+                android:drawablePadding="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="search"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_below="@+id/textView14"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/icondatee"
+                android:focusable="false"
+                android:hint="Exp.Date" />
+
+            <EditText
+                android:id="@+id/txtprodidinstock"
+                android:layout_width="220dp"
+                android:layout_height="55dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="221dp"
+                android:ems="10"
+                android:enabled="true"
+                android:hint="Product ID"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/txtprodname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView14"
+                android:layout_alignBottom="@+id/textView14"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="-1dp"
+                android:layout_toEndOf="@+id/textView14"
+                android:text=" "
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnsearch3"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:text="Product Name: "
+                android:textAlignment="viewEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtquaninstock"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:text="Supplier:"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtsupname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView18"
+                android:layout_alignBottom="@+id/textView18"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="-1dp"
+                android:layout_toEndOf="@+id/textView18"
+                android:text=" "
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnadd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtsupname"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/square_button_greenlight"
+                android:drawableLeft="@drawable/iconadd"
+                android:drawablePadding="8dp"
+                android:text="add"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/txtquaninstock"
+                android:layout_width="330dp"
+                android:layout_height="56dp"
+                android:layout_below="@+id/etDate"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="Quantity"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btnscan3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtprodidinstock"
+                android:layout_alignBottom="@+id/txtprodidinstock"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/blue"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/square_button_blue"
+                android:drawableLeft="@drawable/iconscan"
+                android:drawablePadding="8dp"
+                android:text="scan"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <!--<DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="253dp"
+        android:layout_height="286dp"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="60dp" /> -->
+        </RelativeLayout>
+    </LinearLayout>
+    </android.widget.ScrollView>

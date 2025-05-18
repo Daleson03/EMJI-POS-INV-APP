@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!-- ✅ Single checkable group -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:title="Dashboard"
+            android:icon="@drawable/dashboard"
+            tools:ignore="HardcodedText"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/sale"
+            android:title="Sale"
+            tools:ignore="HardcodedText"
+            android:checkable="false">
+            <menu>
+                <item
+                    android:id="@+id/nav_sales_report"
+                    android:icon="@drawable/salesreport"
+                    android:title="Sales Report"
+                    android:checkable="true"/>
+
+                <item
+                    android:id="@+id/nav_sales_history"
+                    android:icon="@drawable/saleshistory"
+                    android:title="Transaction History"
+                    android:checkable="true"/>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/purchases"
+            android:title="Purchases"
+            tools:ignore="HardcodedText"
+            android:checkable="false">
+            <menu>
+                <item
+                    android:id="@+id/nav_new_purchase"
+                    android:icon="@drawable/newpurchase"
+                    android:title="New Sales"
+                    android:checkable="true"/>
+
+                <item
+                    android:id="@+id/nav_return_purchase"
+                    android:icon="@drawable/returnpurchase"
+                    android:title="Sales Return"
+                    android:checkable="true"/>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/product"
+            android:title="Product"
+            tools:ignore="HardcodedText"
+            android:checkable="false">
+            <menu>
+                <item
+                    android:id="@+id/nav_add_update"
+                    android:icon="@drawable/addupdate"
+                    android:title="Add/Update"
+                    android:checkable="true"/>
+
+                <item
+                    android:id="@+id/nav_product_list"
+                    android:icon="@drawable/productlist"
+                    android:title="Product List"
+                    android:checkable="true"/>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/stock"
+            android:title="Stock"
+            tools:ignore="HardcodedText"
+            android:checkable="false">
+            <menu>
+                <item
+                    android:id="@+id/nav_manage_stock"
+                    android:icon="@drawable/managestock"
+                    android:title="Manage Stock"
+                    android:checkable="true"/>
+
+                <item
+                    android:id="@+id/nav_stock_history"
+                    android:icon="@drawable/stockhistory"
+                    android:title="Stock History"
+                    android:checkable="true"/>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/suppliers"
+            android:title="Suppliers"
+            tools:ignore="HardcodedText"
+            android:checkable="false">
+            <menu>
+                <item
+                    android:id="@+id/nav_add_update_sup"
+                    android:icon="@drawable/addupdatesup"
+                    android:title="Add/Update"
+                    android:checkable="true"/>
+
+                <item
+                    android:id="@+id/nav_supplier_list"
+                    android:icon="@drawable/iconsupplierlist"
+                    android:title="Supplier List"
+                    android:checkable="true"/>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/set"
+            android:title=""
+            tools:ignore="HardcodedText"
+            android:checkable="false">
+            <menu>
+        <item
+            android:id="@+id/nav_setting"
+            android:title="Setting"
+            android:icon="@drawable/settings"
+            tools:ignore="HardcodedText"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout"
+            android:icon="@drawable/logout"
+            tools:ignore="HardcodedText"
+            android:checkable="true"/>
+            </menu>
+        </item>
+    </group>
+</menu>

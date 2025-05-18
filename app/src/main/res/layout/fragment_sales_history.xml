@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"> <!-- Ensures that the ScrollView takes up the full screen -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Add your content here
+        <TextView
+            android:id="@+id/txtContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />-->
+
+        <!-- More views here -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1024dp"
+            android:background="@drawable/transactionhistory"
+            tools:context=".NewPurchaseFragment">
+
+            <LinearLayout
+                android:id="@+id/tableContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtproductname3"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="550dp"
+                    android:fillViewport="true"
+                    android:importantForAccessibility="no"
+                    android:nestedScrollingEnabled="true"> <!-- Adjust height as needed -->
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:scrollbars="horizontal">
+
+                        <TableLayout
+                            android:id="@+id/tableLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/table_background"
+                            android:padding="5dp"
+                            android:showDividers="middle"
+                            android:stretchColumns="*" />
+                    </HorizontalScrollView>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtproductname3"
+                android:layout_width="220dp"
+                android:layout_height="57dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="221dp"
+                android:ems="10"
+                android:hint="Transaction No."
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnscan5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtproductname3"
+                android:layout_alignBottom="@+id/txtproductname3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/square_button_blue"
+                android:backgroundTint="@color/blue"
+                android:drawableLeft="@drawable/iconscan"
+                android:drawablePadding="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="scan"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

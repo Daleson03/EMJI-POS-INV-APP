@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@drawable/bgsupplierlist"
+    tools:context=".SupplierListFragment">
+
+    <Button
+        android:id="@+id/btnaddsup"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/square_button_greenlight"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:drawableLeft="@drawable/iconadd"
+        android:drawablePadding="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Add"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/txtsuppliern"
+        android:layout_width="210dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="274dp"
+        android:ems="10"
+        android:hint="Supplier Name"
+        android:inputType="text" />
+
+
+    <LinearLayout
+        android:id="@+id/tableContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtsuppliern"
+        android:layout_marginTop="13dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:importantForAccessibility="no"
+            android:nestedScrollingEnabled="true"
+            android:fillViewport="true"> <!-- Adjust height as needed -->
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:scrollbars="horizontal">
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/table_background"
+                    android:padding="5dp"
+                    android:showDividers="middle"
+                    android:stretchColumns="*" />
+            </HorizontalScrollView>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

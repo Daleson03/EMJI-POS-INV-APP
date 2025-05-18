@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"> <!-- Ensures that the ScrollView takes up the full screen -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Add your content here
+        <TextView
+            android:id="@+id/txtContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />-->
+
+        <!-- More views here -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1024dp"
+            android:background="@drawable/bgproductlist"
+            tools:context=".ProductListFragment">
+
+            <Button
+                android:id="@+id/btnpropdf"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/btnaddprodstock"
+                android:layout_alignBottom="@+id/btnaddprodstock"
+                android:layout_marginTop="-4dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="-1dp"
+                android:layout_toStartOf="@+id/btnaddprodstock"
+                android:background="@drawable/square_button_green"
+                android:contentDescription="Select a date from the calendar"
+                android:drawableLeft="@drawable/logopdf"
+                android:padding="10dp"
+                android:textSize="0sp" />
+
+            <EditText
+                android:id="@+id/txtproductidinstock"
+                android:layout_width="220dp"
+                android:layout_height="58dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="220dp"
+                android:ems="10"
+                android:enabled="true"
+                android:hint="Product ID"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="97dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/btnaddprodstock"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="59dp"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/ddstatusinstock"
+                android:layout_width="128dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textView8"
+                android:layout_alignStart="@+id/textView8"
+                android:layout_alignEnd="@+id/textView8"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="-43dp"
+                android:background="@drawable/spinner_border" />
+
+            <Spinner
+                android:id="@+id/ddsupplierinstock"
+                android:layout_width="140dp"
+                android:layout_height="53dp"
+                android:layout_below="@+id/textView6"
+                android:layout_alignStart="@+id/textView6"
+                android:layout_alignEnd="@+id/textView6"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="-43dp"
+                android:background="@drawable/spinner_border" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="97dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/btnaddprodstock"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:text="Supplier"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnaddprodstock"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtproductidinstock"
+                android:layout_alignStart="@+id/btnscan2"
+                android:layout_alignEnd="@+id/btnscan2"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="-3dp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/square_button_greenlight"
+                android:drawableLeft="@drawable/iconadd"
+                android:drawablePadding="8dp"
+                android:text="Add"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+
+            <Button
+                android:id="@+id/btnscan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtproductidinstock"
+                android:layout_alignBottom="@+id/txtproductidinstock"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/blue"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/square_button_blue"
+                android:drawableLeft="@drawable/iconscan"
+                android:drawablePadding="8dp"
+                android:text="scan"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+            android:id="@+id/tableContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ddstatusinstock"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:importantForAccessibility="no"
+                android:nestedScrollingEnabled="true"
+                android:fillViewport="true"> <!-- Adjust height as needed -->
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    android:importantForAccessibility="no">
+
+                    <TableLayout
+                        android:id="@+id/tableLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/table_background"
+                        android:padding="5dp"
+                        android:showDividers="middle"
+                        android:stretchColumns="*" />
+                </HorizontalScrollView>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

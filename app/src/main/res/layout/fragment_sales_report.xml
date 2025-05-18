@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"> <!-- Ensures that the ScrollView takes up the full screen -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Add your content here
+        <TextView
+            android:id="@+id/txtContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />-->
+
+        <!-- More views here -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1024dp"
+            android:background="@drawable/bgsalesreport"
+            tools:context=".SalesReportFragment">
+
+            <EditText
+                android:id="@+id/etDate4"
+                android:layout_width="158dp"
+                android:layout_height="56dp"
+                android:layout_below="@+id/ddmonth"
+                android:layout_alignStart="@+id/textView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:drawableEnd="@drawable/icondatee"
+                android:focusable="false"
+                android:hint="Date" />
+
+            <TextView
+                android:id="@+id/txttotalsale"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnsavepdf"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="7dp"
+                android:text="Total Sale:"
+                android:textAlignment="viewStart"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtnetsalelabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtnetsale"
+                android:layout_alignBottom="@+id/txtnetsale"
+                android:layout_marginTop="-1dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toStartOf="@+id/txtnetsale"
+                android:text="Net Sale:"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtnetsalelabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txttotalsale"
+                android:layout_alignBottom="@+id/txttotalsale"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toStartOf="@+id/txttotalsale"
+                android:text="Gross Sale:"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtnetsale"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txttotalsale"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="7dp"
+                android:text="Total Sale:"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtreturn"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtreturnlabel"
+                android:layout_alignBottom="@+id/txtreturnlabel"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="-1dp"
+                android:layout_toEndOf="@+id/txtreturnlabel"
+                android:text="Return:"
+                android:textAlignment="textStart"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtdiscount"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtdiscountlabel"
+                android:layout_alignBottom="@+id/txtdiscountlabel"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="-1dp"
+                android:layout_toEndOf="@+id/txtdiscountlabel"
+                android:text="Return:"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtdiscountlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtreturnlabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="13dp"
+                android:text="Discount:"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtreturnlabel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnsavepdf"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="13dp"
+                android:text="Return:"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/tableContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtnetsalelabel"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="550dp"
+                    android:fillViewport="true"
+                    android:importantForAccessibility="no"
+                    android:nestedScrollingEnabled="true"> <!-- Adjust height as needed -->
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="no"
+                        android:scrollbars="horizontal">
+
+                        <TableLayout
+                            android:id="@+id/tableLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/table_background"
+                            android:padding="5dp"
+                            android:showDividers="middle"
+                            android:stretchColumns="*" />
+                    </HorizontalScrollView>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/ddsupplier2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView16"
+                android:layout_alignBottom="@+id/textView16"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="-14dp"
+                android:layout_marginBottom="-13dp"
+                android:layout_toEndOf="@+id/textView16"
+                android:background="@drawable/spinner_border" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ddYear"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="29dp"
+                android:text="Supplier"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/ddmonth"
+                android:layout_width="80dp"
+                android:layout_height="53dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="221dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/spinner_border" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ddmonth"
+                android:layout_alignBottom="@+id/ddmonth"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="13dp"
+                android:layout_toStartOf="@+id/ddmonth"
+                android:text="Month:"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/ddYear"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/textView21"
+                android:layout_alignBottom="@+id/textView21"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="-14dp"
+                android:layout_marginBottom="-2dp"
+                android:layout_toEndOf="@+id/textView21"
+                android:background="@drawable/spinner_border" />
+
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="239dp"
+                android:text="Year"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnsavepdf"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etDate4"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/square_button_green"
+                android:contentDescription="Select a date from the calendar"
+                android:drawableLeft="@drawable/logopdf"
+                android:padding="10dp"
+                android:textSize="0sp"
+                />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

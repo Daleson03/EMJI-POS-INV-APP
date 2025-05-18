@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="24dp"
+    android:background="@drawable/bgloginform">
+
+    <!-- Lottie Animation View -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        app:lottie_rawRes="@raw/checkmark_animation"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" /><!-- Link to your downloaded JSON -->
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lottieAnimationView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Your account has been successfully verified!"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333" />
+
+    <Button
+        android:id="@+id/btnGoToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Login"
+        android:layout_below="@id/txtMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textColor="#02277E"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        android:stateListAnimator="@null"/>
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+APK file location
+app -> build -> outputs -> apk -> debug -> app-debug.apk
+
+Note: when installing the app, all you need to transfer into a mobile device is the apk.
